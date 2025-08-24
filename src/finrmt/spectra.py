@@ -10,3 +10,10 @@ def r_statistics(eig_sorted):
         r_stats.append(r)
         mean_r = sum(r_stats) / len(r_stats)
     return mean_r
+
+def ipr(vecs):
+    ipr = []
+    for vec in vecs.T:
+        ipr_value = sum(vec**4) / (sum(vec**2)**2)
+        ipr.append(ipr_value)
+    return ipr

@@ -12,13 +12,14 @@ def r_statistics(eig_sorted):
         mean_r = sum(r_stats) / len(r_stats)
     return mean_r
 
+# Inverse Participation Ratio (IPR) for eigenvectors
 def ipr(vecs):
     ipr = []
     for vec in vecs.T:
         ipr_value = sum(vec**4) / (sum(vec**2)**2)
         ipr.append(ipr_value)
     return ipr
-
+# Trim k eigenvalues from each end before computing r-statistics, for better accuracy
 def r_stat(eigs_sort, trim_k):
     if trim_k > 0:
         eigs_sort = eigs_sort[trim_k:-trim_k]

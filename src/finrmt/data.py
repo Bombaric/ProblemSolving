@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 import numpy as np
+import pandas as pd
+#lavoro con dataframe pandas
+#calcolo rendimenti logaritmici e winsorizzazione
 
 def returns(df_prices, method="log", standardize=True):
     #per completezza considero anche i rendimenti semplici, ma di default uso quelli logaritmici
@@ -9,17 +12,13 @@ def returns(df_prices, method="log", standardize=True):
         ret = df_prices.pct_change()
     else:
         raise ValueError("Unknown method: choose 'log' or 'simple'.")
-
+    #normalizzo i rendimenti (z-score) per ogni colonna (ticker). ogni titolo ha media 0 e varianza 1 nel corso del periodo
     if standardize:
         ret = (ret - ret.mean()) / ret.std()
     return ret
 
-def volatility(df_prices, window=30):
-    log_returns = returns(df_prices, method="log", standardize=False)
-    vol = log_returns.rolling(window=window).std() * np.sqrt(252)  # Annualized volatility
-    return vol
-
-def winsorize_sigma(df, k=5.0): #windsotizzazione a 5 sigma (opzionale)
+#winsorizzazione: taglio delle code della distribuzione per evitare outlier estremi
+def winsorize_sigma(df, k=5.0): #windsotizzazione a 5 sigma
     mu = df.mean()
     sd = df.std(ddof=0)
     lo = mu - k * sd

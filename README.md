@@ -12,7 +12,7 @@ _Obiettivi_
 - - Market mode (autovalore dominante).
   - Settori (autovalori intermedi significativi).
   - Rumore (bulk spettrale casuale).
-- Studiare la distribuzione dello spacing tra autovalori e confrontarla con le previsioni teoriche della RMT (Wigner–Dyson, Poisson).
+- Studiare la distribuzione dello spacing tra autovalori e confrontarla con le previsioni teoriche della RMT.
 
 **Struttura del repository**
 

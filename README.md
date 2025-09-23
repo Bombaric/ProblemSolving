@@ -17,9 +17,14 @@ _Obiettivi_
 **Struttura del repository**
 
 ProblemSolving/
+
 ├── figs/              # figure salvate (plot, simulazioni)
+
 ├── notebooks/         # Jupyter Notebook con analisi ed esperimenti
+
 ├── src/finrmt/        # funzioni Python per calcoli e plotting
+
 ├── data/              # dati utili (matrice dei rendimenti)
+
 └── README.md          # questo file
 

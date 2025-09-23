@@ -1,23 +1,25 @@
-** Analisi dei ritorni finanziari con Random Matrix Theory **
-Descrizione
+**Analisi dei ritorni finanziari con Random Matrix Theory**
+
+_Descrizione_
 
 Questo progetto nasce come esercizio di problem solving con l’obiettivo di analizzare i ritorni finanziari di un set di dati reali, utilizzando strumenti di Random Matrix Theory (RMT).
 In particolare, si studia lo spacing degli autovalori della matrice di correlazione stimata dai dati, confrontandolo con i risultati attesi da matrici casuali.
 
-Obiettivi
+_Obiettivi_
+- Costruire la matrice di correlazione dei rendimenti normalizzati.
+- Applicare tecniche di pulizia del rumore (Marčenko–Pastur clipping, shrinkage, ecc.).
+- Analizzare:
+- - Market mode (autovalore dominante).
+  - Settori (autovalori intermedi significativi).
+  - Rumore (bulk spettrale casuale).
+- Studiare la distribuzione dello spacing tra autovalori e confrontarla con le previsioni teoriche della RMT (Wigner–Dyson, Poisson).
 
-Costruire la matrice di correlazione dei rendimenti normalizzati.
+**Struttura del repository**
 
-Applicare tecniche di pulizia del rumore (Marčenko–Pastur clipping, shrinkage, ecc.).
+ProblemSolving/
+├── figs/              # figure salvate (plot, simulazioni)
+├── notebooks/         # Jupyter Notebook con analisi ed esperimenti
+├── src/finrmt/        # funzioni Python per calcoli e plotting
+├── data/              # dati utili (matrice dei rendimenti)
+└── README.md          # questo file
 
-Analizzare:
-
-Market mode (autovalore dominante).
-
-Settori (autovalori intermedi significativi).
-
-Rumore (bulk spettrale casuale).
-
-Studiare la distribuzione dello spacing tra autovalori e confrontarla con le previsioni teoriche della RMT (Wigner–Dyson, Poisson).
-
-Struttura del repository

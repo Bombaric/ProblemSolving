@@ -3,7 +3,7 @@
 _Descrizione_
 
 Questo progetto nasce come oggetto dell'esame _Problem Solving in fisica_ con l’obiettivo di analizzare i ritorni finanziari di un set di dati reali, utilizzando strumenti di Random Matrix Theory (RMT).
-In particolare, si studia lo spacing degli autovalori della matrice di correlazione stimata dai dati, confrontandolo con i risultati attesi da matrici casuali.
+In particolare, si studia lo spacing e la distribuzione degli autovalori e la localizzazione degli autovettori della matrice di correlazione stimata dai dati, confrontandolo con i risultati attesi da matrici casuali.
 
 _Obiettivi_
 - Costruire la matrice di correlazione dei rendimenti normalizzati.
